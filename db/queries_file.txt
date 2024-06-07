@@ -1,10 +1,10 @@
 -- database: /Users/simonmaignan/workspace/coursera/SQL_for_data_analysis/db/usda.sqlite3
 -- Use the ▷ button in the top right corner to run the entire file.
--- Show coffee production data for the year 2015. What is the total value?
--- Answer = 6600000
+-- Find the average honey production for the year 2022.
+-- Answer = 3133275.0
 SELECT
-    Value
+    avg(Value)
 FROM
-    coffee_production
+    honey_production
 WHERE
-    Year = 2015
+    Year = 2022
