@@ -33,3 +33,12 @@ FROM
     coffee_production
 WHERE
     Year = 2011
+
+-- There's a meeting with the Honey Council next week. Find the average honey production for 2022 so you're prepared.
+-- Answer = 3133275.0
+SELECT
+    avg(Value)
+FROM
+    honey_production
+WHERE
+    Year = 2022
