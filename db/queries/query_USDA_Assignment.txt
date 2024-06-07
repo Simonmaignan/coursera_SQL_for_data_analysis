@@ -50,3 +50,19 @@ SELECT
     *
 FROM
     state_lookup
+
+-- For a cross-commodity report, can you list all states with their cheese production values, even if they didn't produce any cheese in April of 2023?
+-- What is the total for NEW JERSEY?
+-- Answer = 4889000
+SELECT
+    Value,
+    Year,
+    Period,
+    c.State_ANSI,
+    sl.State
+FROM
+    cheese_production c
+    INNER JOIN state_lookup sl ON c.State_ANSI = sl.State_ANSI
+WHERE
+    Year = 2023
+    and Period = 'APR'
