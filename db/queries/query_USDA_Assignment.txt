@@ -1,0 +1,12 @@
+-- Can you find out the total milk production for 2023? Your manager wants this information for the yearly report.
+-- What is the total milk production for 2023?
+-- Answer = 91812000000
+SELECT
+    SUM(Value)
+FROM
+    milk_production
+WHERE
+    Year = 2023
+
+-- Which states had cheese production greater than 100 million in April 2023? The Cheese Department wants to focus their marketing efforts there. 
+-- How many states are there?
