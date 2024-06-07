@@ -10,3 +10,16 @@ WHERE
 
 -- Which states had cheese production greater than 100 million in April 2023? The Cheese Department wants to focus their marketing efforts there. 
 -- How many states are there?
+-- Answer = 2 (55 and 6) or 3 (empty state)
+SELECT
+    Value,
+    Year,
+    Period,
+    State_ANSI
+    -- count(State_ANSI)
+FROM
+    cheese_production
+WHERE
+    Value > 100000000
+    and Year = 2023
+    and Period = 'APR'
