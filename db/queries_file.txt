@@ -1,25 +1,9 @@
 -- database: /Users/simonmaignan/workspace/coursera/SQL_for_data_analysis/db/usda.sqlite3
 -- Use the ▷ button in the top right corner to run the entire file.
-UPDATE cheese_production
-SET
-    value = REPLACE(value, ',', '');
-
-UPDATE honey_production
-SET
-    value = REPLACE(value, ',', '');
-
-UPDATE milk_production
-SET
-    value = REPLACE(value, ',', '');
-
-UPDATE coffee_production
-SET
-    value = REPLACE(value, ',', '');
-
-UPDATE egg_production
-SET
-    value = REPLACE(value, ',', '');
-
-UPDATE yogurt_production
-SET
-    value = REPLACE(value, ',', '');
+-- Find the total milk production for the year 2023.
+SELECT
+    SUM(Value)
+FROM
+    milk_production
+WHERE
+    Year = 2023
