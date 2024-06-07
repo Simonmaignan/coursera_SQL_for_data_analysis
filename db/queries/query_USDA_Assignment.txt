@@ -66,3 +66,18 @@ FROM
 WHERE
     Year = 2023
     and Period = 'APR'
+
+-- Can you find the total yogurt production for states in the year 2022 which also have cheese production data from 2023? This will help the Dairy Division in their planning.
+-- Answer = 4684380000
+SELECT
+    sum(y.Value)
+    -- y.Value,
+    -- y.Year,
+    -- c.Year,
+    -- y.State_ANSI
+FROM
+    yogurt_production y
+    INNER JOIN cheese_production c ON c.State_ANSI = y.State_ANSI
+WHERE
+    y.Year = 2022
+    AND c.Year = 2023
