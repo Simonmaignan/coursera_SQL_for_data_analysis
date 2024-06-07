@@ -1,11 +1,10 @@
 -- database: /Users/simonmaignan/workspace/coursera/SQL_for_data_analysis/db/usda.sqlite3
 -- Use the ▷ button in the top right corner to run the entire file.
--- Get the state names with their corresponding ANSI codes from the state_lookup table. What number is Iowa?
--- Answer = 19
+-- Find the highest yogurt production value for the year 2022.
+-- Answer = 793256000
 SELECT
-    State,
-    State_ANSI
+    max(Value)
 FROM
-    state_lookup
+    yogurt_production
 WHERE
-    State = UPPER('Iowa')
+    Year = 2022
