@@ -23,3 +23,13 @@ WHERE
     Value > 100000000
     and Year = 2023
     and Period = 'APR'
+
+-- Your manager wants to know how coffee production has changed over the years. 
+-- What is the total value of coffee production for 2011?
+-- Answer = 7600000
+SELECT
+    Value
+FROM
+    coffee_production
+WHERE
+    Year = 2011
