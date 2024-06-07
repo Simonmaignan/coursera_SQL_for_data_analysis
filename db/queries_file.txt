@@ -1,18 +1,10 @@
 -- database: /Users/simonmaignan/workspace/coursera/SQL_for_data_analysis/db/usda.sqlite3
 -- Use the ▷ button in the top right corner to run the entire file.
--- Find the total yogurt production for states that also produced cheese in 2022.
--- Answer = 1171095000
+-- Find the total milk production for the year 2023.
+-- Answer = 91812000000
 SELECT
-    sum(Value)
+    SUM(Value)
 FROM
-    yogurt_production
+    milk_production
 WHERE
-    Year = 2022
-    AND State_ANSI IN (
-        SELECT
-            State_ANSI
-        FROM
-            cheese_production
-        WHERE
-            Year = 2022
-    )
+    Year = 2023
