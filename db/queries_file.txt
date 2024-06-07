@@ -1,9 +1,11 @@
 -- database: /Users/simonmaignan/workspace/coursera/SQL_for_data_analysis/db/usda.sqlite3
 -- Use the ▷ button in the top right corner to run the entire file.
--- Show coffee production data for the year 2015. What is the total value?
+-- Find states where both honey and milk were produced in 2022. Did State_ANSI "35" produce both honey and milk in 2022?
 SELECT
-    MAX(Value)
+    m.State_ANSI
 FROM
-    yogurt_production
+    honey_production AS h
+    INNER JOIN milk_production AS m ON h.State_ANSI = m.State_ANSI
 WHERE
-    Year = 2022
+    m.Year = 2022
+    AND m.State_ANSI = 35
