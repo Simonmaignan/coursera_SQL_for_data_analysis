@@ -81,3 +81,17 @@ FROM
 WHERE
     y.Year = 2022
     AND c.Year = 2023
+
+-- List all states from state_lookup that are missing from milk_production in 2023.
+-- How many states are there?
+-- Answer = 
+SELECT
+    Value,
+    Year,
+    m.State_ANSI,
+    sl.State
+FROM
+    state_lookup sl
+    LEFT OUTER JOIN milk_production m ON m.State_ANSI = sl.State_ANSI
+WHERE
+    Value is NULL
