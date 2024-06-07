@@ -2,8 +2,9 @@
 -- Use the ▷ button in the top right corner to run the entire file.
 -- Show coffee production data for the year 2015. What is the total value?
 SELECT
-    Value
+    State,
+    State_ANSI
 FROM
-    coffee_production
+    state_lookup
 WHERE
-    Year = 2015
+    State = UPPER('Iowa')
