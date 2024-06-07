@@ -1,9 +1,9 @@
 -- database: /Users/simonmaignan/workspace/coursera/SQL_for_data_analysis/db/usda.sqlite3
 -- Use the ▷ button in the top right corner to run the entire file.
--- Find the total milk production for the year 2023.
+-- Show coffee production data for the year 2015. What is the total value?
 SELECT
-    SUM(Value)
+    Value
 FROM
-    milk_production
+    coffee_production
 WHERE
-    Year = 2023
+    Year = 2015
