@@ -1,11 +1,14 @@
 -- database: /Users/simonmaignan/workspace/coursera/SQL_for_data_analysis/db/usda.sqlite3
 -- Use the ▷ button in the top right corner to run the entire file.
--- Find states where both honey and milk were produced in 2022. Did State_ANSI "35" produce both honey and milk in 2022?
+-- Find the total yogurt production for states that also produced cheese in 2022.
 SELECT
-    m.State_ANSI
+    sum(y.Value)
+    -- c.Value,
+    -- y.Value,
+    -- c.State_ANSI,
+    -- y.Year
 FROM
-    honey_production AS h
-    INNER JOIN milk_production AS m ON h.State_ANSI = m.State_ANSI
+    cheese_production AS c
+    INNER JOIN yogurt_production AS y ON c.State_ANSI = y.State_ANSI
 WHERE
-    m.Year = 2022
-    AND m.State_ANSI = 35
+    y.Year = 2022
