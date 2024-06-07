@@ -42,3 +42,11 @@ FROM
     honey_production
 WHERE
     Year = 2022
+
+-- The State Relations team wants a list of all states names with their corresponding ANSI codes. Can you generate that list?
+-- What is the State_ANSI code for Florida?
+-- Answer = 12
+SELECT
+    *
+FROM
+    state_lookup
