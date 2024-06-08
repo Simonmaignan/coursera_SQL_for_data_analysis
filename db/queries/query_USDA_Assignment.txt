@@ -115,4 +115,26 @@ WHERE
     -- GROUP BY sl.State
 
 -- Find the average coffee production for all years where the honey production exceeded 1 million.
-
+-- Answer = 6426666.666666667
+SELECT
+    avg(Value)
+    -- Year
+FROM
+    coffee_production
+WHERE
+    Year IN (
+        SELECT
+            Year
+        FROM
+            honey_production
+        WHERE
+            Value > 1000000
+    )
+    -- SELECT
+    --     Value,
+    --     -- State_ANSI,
+    --     Year
+    -- FROM
+    --     honey_production
+    -- WHERE
+    --     Value > 1000000
