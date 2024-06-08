@@ -95,3 +95,24 @@ FROM
     LEFT OUTER JOIN milk_production m ON m.State_ANSI = sl.State_ANSI
 WHERE
     Value is NULL
+
+-- List all states with their cheese production values, including states that didn't produce any cheese in April 2023.
+-- Did Delaware produce any cheese in April 2023?
+-- Answer = No
+SELECT
+    Value,
+    Year,
+    Period,
+    -- c.State_ANSI,
+    sl.State
+FROM
+    state_lookup sl
+    LEFT OUTER JOIN cheese_production c ON c.State_ANSI = sl.State_ANSI
+WHERE
+    -- Year = 2023
+    --     -- Value is NULL
+    sl.State = UPPER('Delaware')
+    -- GROUP BY sl.State
+
+-- Find the average coffee production for all years where the honey production exceeded 1 million.
+
