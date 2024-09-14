@@ -7,7 +7,7 @@ SELECT
 FROM
     milk_production
 WHERE
-    Year = 2023
+    Year = 2023;
 
 -- Find the highest yogurt production value for the year 2022.
 -- Answer = 793256000
@@ -16,7 +16,7 @@ SELECT
 FROM
     yogurt_production
 WHERE
-    Year = 2022
+    Year = 2022;
 
 -- Show coffee production data for the year 2015. What is the total value?
 -- Answer = 6600000
@@ -25,7 +25,7 @@ SELECT
 FROM
     coffee_production
 WHERE
-    Year = 2015
+    Year = 2015;
 
 -- Find the average honey production for the year 2022.
 -- Answer = 3133275.0
@@ -34,7 +34,7 @@ SELECT
 FROM
     honey_production
 WHERE
-    Year = 2022
+    Year = 2022;
 
 -- Get the state names with their corresponding ANSI codes from the state_lookup table. What number is Iowa?
 -- Answer = 19
@@ -44,7 +44,7 @@ SELECT
 FROM
     state_lookup
 WHERE
-    State = UPPER('Iowa')
+    State = UPPER('Iowa');
 
 -- Find the highest yogurt production value for the year 2022.
 -- Answer = 793256000
@@ -53,7 +53,7 @@ SELECT
 FROM
     yogurt_production
 WHERE
-    Year = 2022
+    Year = 2022;
 
 -- Find states where both honey and milk were produced in 2022.
 -- Did State_ANSI "35" produce both honey and milk in 2022?
@@ -82,4 +82,4 @@ WHERE
             cheese_production
         WHERE
             Year = 2022
-    )
+    );
